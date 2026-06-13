@@ -1,351 +1,421 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Agricultura Regenerativa | Proyecto Escolar</title>
+    <title>Agricultura Regenerativa | Proyecto Escolar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
+    <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Poppins',sans-serif;
+                    scroll-behavior: smooth;
+                }
 
-body{
-background:#f4f7f4;
-color:#333;
-}
+                body {
+                    background: #f4f7f4;
+                    color: #333;
+                    line-height: 1.7;
+                }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#2e7d32;
-padding:15px;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
-}
+                /* ==========================
+           MENU
+        ========================== */
 
-nav ul{
-display:flex;
-justify-content:center;
-list-style:none;
-gap:30px;
-}
+                nav {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    background: #2e7d32;
+                    padding: 15px;
+                    z-index: 1000;
+                    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+                }
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:600;
-}
+                    nav ul {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 25px;
+                        list-style: none;
+                    }
 
-header{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
-url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1600");
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
+                    nav a {
+                        color: white;
+                        text-decoration: none;
+                        font-weight: 600;
+                        transition: .3s;
+                    }
 
-header h1{
-font-size:4rem;
-}
+                        nav a:hover {
+                            color: #c8e6c9;
+                        }
 
-header p{
-font-size:1.4rem;
-margin-top:10px;
-}
+                /* ==========================
+           HERO
+        ========================== */
 
-.btn{
-margin-top:25px;
-display:inline-block;
-padding:15px 30px;
-background:#4caf50;
-color:white;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
+                header {
+                    height: 100vh;
+                    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1600");
+                    background-size: cover;
+                    background-position: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: white;
+                    padding: 20px;
+                }
 
-section{
-padding:80px 10%;
-}
+                    header h1 {
+                        font-size: 4rem;
+                    }
 
-h2{
-text-align:center;
-margin-bottom:40px;
-font-size:2.3rem;
-color:#2e7d32;
-}
+                    header p {
+                        font-size: 1.3rem;
+                        margin-top: 15px;
+                    }
 
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
-margin-bottom:30px;
-}
+                .btn {
+                    margin-top: 25px;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    background: #4caf50;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 50px;
+                    font-weight: bold;
+                    transition: .3s;
+                }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
+                    .btn:hover {
+                        background: #388e3c;
+                    }
 
-.beneficio{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-text-align:center;
-}
+                /* ==========================
+           SECCIONES
+        ========================== */
 
-.timeline{
-border-left:4px solid #4caf50;
-padding-left:30px;
-}
+                section {
+                    padding: 80px 10%;
+                }
 
-.timeline div{
-margin-bottom:25px;
-}
+                h2 {
+                    text-align: center;
+                    margin-bottom: 40px;
+                    color: #2e7d32;
+                    font-size: 2.3rem;
+                }
 
-.video-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
+                .card {
+                    background: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+                    margin-bottom: 30px;
+                }
 
-.video-btn{
-display:block;
-background:#e53935;
-color:white;
-text-decoration:none;
-padding:20px;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
-}
+                /* ==========================
+           GRID
+        ========================== */
 
-footer{
-background:#2e7d32;
-color:white;
-text-align:center;
-padding:30px;
-}
+                .grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+                    gap: 25px;
+                }
 
-.qr{
-text-align:center;
-margin-top:30px;
-}
+                .beneficio {
+                    background: white;
+                    padding: 25px;
+                    border-radius: 15px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+                    text-align: center;
+                    transition: .3s;
+                }
 
-.qr img{
-width:220px;
-}
+                    .beneficio:hover {
+                        transform: translateY(-5px);
+                    }
 
-</style>
+                /* ==========================
+           TIMELINE
+        ========================== */
+
+                .timeline {
+                    border-left: 4px solid #4caf50;
+                    padding-left: 25px;
+                }
+
+                    .timeline div {
+                        margin-bottom: 30px;
+                    }
+
+                /* ==========================
+           VIDEOS
+        ========================== */
+
+                .video-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+                    gap: 20px;
+                }
+
+                .video-btn {
+                    display: block;
+                    background: #e53935;
+                    color: white;
+                    text-decoration: none;
+                    padding: 25px;
+                    border-radius: 12px;
+                    text-align: center;
+                    font-weight: bold;
+                    transition: .3s;
+                }
+
+                    .video-btn:hover {
+                        transform: scale(1.03);
+                    }
+
+                /* ==========================
+           FOOTER
+        ========================== */
+
+                footer {
+                    background: #2e7d32;
+                    color: white;
+                    text-align: center;
+                    padding: 30px;
+                }
+
+                /* ==========================
+           RESPONSIVE
+        ========================== */
+
+                @media (max-width:768px) {
+
+                    nav ul {
+                        gap: 10px;
+                    }
+
+                    nav a {
+                        font-size: .9rem;
+                    }
+
+                    header {
+                        padding-top: 100px;
+                    }
+
+                        header h1 {
+                            font-size: 2.3rem;
+                        }
+
+                        header p {
+                            font-size: 1rem;
+                        }
+
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    section {
+                        padding: 60px 20px;
+                    }
+                }
+
+                @media (max-width:480px) {
+
+                    header h1 {
+                        font-size: 1.8rem;
+                    }
+
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    .btn {
+                        width: 100%;
+                        max-width: 250px;
+                    }
+                }
+    </style>
 
 </head>
 
 <body>
 
-<nav>
-<ul>
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#quees">¿Qué es?</a></li>
-<li><a href="#caso">Caso de Estudio</a></li>
-<li><a href="#beneficios">Beneficios</a></li>
-<li><a href="#videos">Videos</a></li>
-<li><a href="#conclusion">Conclusión</a></li>
-</ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#quees">¿Qué es?</a></li>
+            <li><a href="#caso">Caso de Estudio</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+        </ul>
+    </nav>
 
-<header id="inicio">
+    <header id="inicio">
 
-<h1>🌱 Agricultura Regenerativa</h1>
+        <h1>🌱 Agricultura Regenerativa</h1>
 
-<p>Proyecto Escolar presentado por Vallolet</p>
+        <p>Proyecto Escolar presentado por Vallolet</p>
 
-<a href="#quees" class="btn">Explorar Proyecto</a>
+        <a href="#quees" class="btn">Explorar Proyecto</a>
 
-</header>
+    </header>
 
-<section id="quees">
+    <section id="quees">
 
-<h2>¿Qué es la Agricultura Regenerativa?</h2>
+        <h2>¿Qué es la Agricultura Regenerativa?</h2>
 
-<div class="card">
+        <div class="card">
 
-<p>
-La agricultura regenerativa es un modelo de producción que busca recuperar la salud del suelo, conservar el agua y fomentar la biodiversidad mediante prácticas que trabajan junto con la naturaleza. Su objetivo no solo es producir alimentos, sino también restaurar los ecosistemas para que sean más fuertes y sostenibles para las futuras generaciones.
-</p>
+            <p>
+                La agricultura regenerativa es una forma de producción agrícola que busca recuperar la salud del suelo, conservar el agua y fomentar la biodiversidad. Su objetivo es producir alimentos mientras se restauran los ecosistemas para beneficio de las futuras generaciones.
+            </p>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
-<section>
+    <section>
 
-<h2>La Problemática</h2>
+        <h2>🌍 La Problemática</h2>
 
-<div class="grid">
+        <div class="grid">
 
-<div class="beneficio">
-<h3>🌎 Desertificación</h3>
-<p>Pérdida gradual de suelo fértil.</p>
-</div>
+            <div class="beneficio">
+                <h3>🌎 Desertificación</h3>
+                <p>Pérdida gradual de suelo fértil.</p>
+            </div>
 
-<div class="beneficio">
-<h3>💧 Escasez de Agua</h3>
-<p>Menor disponibilidad para cultivos.</p>
-</div>
+            <div class="beneficio">
+                <h3>💧 Escasez de Agua</h3>
+                <p>Menor disponibilidad para cultivos.</p>
+            </div>
 
-<div class="beneficio">
-<h3>🐦 Pérdida de Biodiversidad</h3>
-<p>Desaparición de especies importantes.</p>
-</div>
+            <div class="beneficio">
+                <h3>🐦 Pérdida de Biodiversidad</h3>
+                <p>Desaparición de especies importantes.</p>
+            </div>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
-<section id="caso">
+    <section id="caso">
 
-<h2>🐢 Caso de Estudio: Las Tortugas del Sahara</h2>
+        <h2>🐢 Caso de Estudio: Las Tortugas del Sahara</h2>
 
-<div class="card">
+        <div class="card">
 
-<p>
-En el Sahel africano se intentó recuperar zonas degradadas plantando árboles, pero los resultados fueron limitados. En 2021 se introdujeron 500 tortugas Centrochelys sulcata, una especie adaptada al desierto.
-</p>
+            <p>
+                En el Sahel africano se intentó recuperar zonas degradadas mediante la reforestación, pero los resultados fueron limitados. En 2021 se introdujeron 500 tortugas Centrochelys sulcata, capaces de excavar túneles profundos que mejoraron la infiltración del agua y favorecieron la aparición de vegetación.
+            </p>
 
-<br>
+        </div>
 
-<p>
-Estas tortugas excavan túneles de hasta 10 metros de profundidad, permitiendo que el agua de lluvia penetre mejor en el suelo. Gracias a ello comenzaron a aparecer zonas verdes donde antes solo existía arena endurecida.
-</p>
+        <div class="timeline">
 
-</div>
+            <div>
+                <h3>2021</h3>
+                <p>Introducción de 500 tortugas.</p>
+            </div>
 
-<div class="timeline">
+            <div>
+                <h3>2022</h3>
+                <p>Comienzan las excavaciones naturales.</p>
+            </div>
 
-<div>
-<h3>2021</h3>
-<p>Llegan 500 tortugas al área degradada.</p>
-</div>
+            <div>
+                <h3>2024</h3>
+                <p>Aumenta la retención de humedad.</p>
+            </div>
 
-<div>
-<h3>2022</h3>
-<p>Comienzan excavaciones y cambios en el suelo.</p>
-</div>
+            <div>
+                <h3>2026</h3>
+                <p>Regresan zonas verdes y biodiversidad.</p>
+            </div>
 
-<div>
-<h3>2024</h3>
-<p>Aumenta la retención de agua.</p>
-</div>
+        </div>
 
-<div>
-<h3>2026</h3>
-<p>Aparecen nuevas zonas verdes y mayor biodiversidad.</p>
-</div>
+    </section>
 
-</div>
+    <section id="beneficios">
 
-</section>
+        <h2>🌱 Beneficios de la Agricultura Regenerativa</h2>
 
-<section id="beneficios">
+        <div class="grid">
 
-<h2>Beneficios de la Agricultura Regenerativa</h2>
+            <div class="beneficio">🌱 Suelos más sanos</div>
+            <div class="beneficio">💧 Conservación de agua</div>
+            <div class="beneficio">🐝 Más biodiversidad</div>
+            <div class="beneficio">🌍 Menor impacto ambiental</div>
+            <div class="beneficio">🌾 Producción sostenible</div>
+            <div class="beneficio">♻️ Recuperación de ecosistemas</div>
 
-<div class="grid">
+        </div>
 
-<div class="beneficio">
-🌱 Suelos más sanos
-</div>
+    </section>
 
-<div class="beneficio">
-💧 Mayor conservación de agua
-</div>
+    <section id="videos">
 
-<div class="beneficio">
-🐝 Más biodiversidad
-</div>
+        <h2>🎥 Videos Informativos</h2>
 
-<div class="beneficio">
-🌍 Menor impacto ambiental
-</div>
+        <div class="video-grid">
 
-<div class="beneficio">
-🌾 Producción sostenible
-</div>
+            <a class="video-btn"
+               target="_blank"
+               href="https://www.youtube.com/watch?v=lYQnJGv7SaM">
+                🎥 Historia de las Tortugas del Sahara
+            </a>
 
-<div class="beneficio">
-♻️ Recuperación de ecosistemas
-</div>
+            <a class="video-btn"
+               target="_blank"
+               href="https://www.youtube.com/watch?v=R8G2cT-oUZM">
+                🌱 Agricultura Regenerativa
+            </a>
 
-</div>
+            <a class="video-btn"
+               target="_blank"
+               href="https://www.youtube.com/watch?v=lYQnJGv7SaM">
+                🔬 Investigación y Restauración de Ecosistemas
+            </a>
 
-</section>
+        </div>
 
-<section id="videos">
+    </section>
 
-<h2>🎥 Videos Informativos</h2>
+    <section id="conclusion">
 
-<div class="video-grid">
+        <h2>🎯 Conclusión</h2>
 
-<a class="video-btn"
-target="_blank"
-href="https://www.youtube.com/watch?v=lYQnJGv7SaM">
-▶ Ver Video Principal </a>
+        <div class="card">
 
-<a class="video-btn"
-target="_blank"
-href="https://www.youtube.com/watch?v=R8G2cT-oUZM">
-▶ Video Complementario </a>
+            <p>
+                La agricultura regenerativa demuestra que trabajar junto con la naturaleza puede restaurar ecosistemas degradados, mejorar la calidad del suelo y contribuir a un futuro más sostenible. El caso de las tortugas del Sahara es un ejemplo inspirador de cómo la biodiversidad puede ayudar a recuperar zonas afectadas por la desertificación.
+            </p>
 
-<a class="video-btn"
-target="_blank"
-href="https://www.youtube.com/watch?v=lYQnJGv7SaM">
-▶ Entrevista / Investigación </a>
+        </div>
 
-</div>
+    </section>
 
-</section>
+    <footer>
 
-<section id="conclusion">
+        Proyecto Escolar 2026 • Agricultura Regenerativa • Vallolet
 
-<h2>Conclusión</h2>
-
-<div class="card">
-
-<p>
-La agricultura regenerativa demuestra que trabajar junto con la naturaleza puede restaurar ecosistemas degradados, mejorar la calidad del suelo y contribuir a un futuro más sostenible. El caso de las tortugas del Sahara es un ejemplo de cómo los procesos naturales pueden ayudar a recuperar la vida en zonas afectadas por la desertificación.
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-Proyecto Escolar 2026 • Agricultura Regenerativa • Vallet
-
-</footer>
+    </footer>
 
 </body>
 </html>
